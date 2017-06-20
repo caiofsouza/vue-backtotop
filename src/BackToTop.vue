@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade">
+  <transition name="back-to-top-fade">
     <div class="vue-back-to-top" v-show="visible">
       <a @click="backToTop">
         {{ text }}
@@ -9,12 +9,17 @@
 </template>
 
 <script>
+
 export default {
   name: 'BackToTop',
   props: {
     text: {
       type: String,
       default: 'Voltar ao topo'
+    },
+    visibleOffset: {
+      type: [String, Number],
+      default: 800
     }
   },
   data () {
@@ -28,7 +33,7 @@ export default {
    */
   created () {
     let catchScroll = () => {
-      this.visible = (window.pageYOffset > 800)
+      this.visible = (window.pageYOffset > parseInt(this.visibleOffset))
     }
     window.onscroll = catchScroll
   },
@@ -47,29 +52,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .7s;
-}
-.fade-enter, .fade-leave-to{
-  opacity: 0;
-}
-
-.back-to-top{
-  position: fixed;
-  bottom: 40px;
-  right: 30px;
-  width: 160px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 30px;
-  background-color: #f5c85c;
-  border-radius: 3px;
-  z-index: 1000;
-
-  a{
-    color:#ffffff;
-  }
-}
-</style>
