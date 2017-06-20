@@ -13,7 +13,6 @@ npm install vue-backtotop --save
 ```javascript
 import Vue from 'vue'
 import BackToTop from 'vue-backtotop'
-import 'vue-backtotop/src/styles.css'
 
 Vue.use(BackToTop);
 ...
