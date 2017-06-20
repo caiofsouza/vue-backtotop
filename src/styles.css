@@ -16,6 +16,7 @@
   background-color: #f5c85c;
   border-radius: 3px;
   z-index: 1000;
+  cursor:pointer;
 }
 
 .vue-back-to-top a{

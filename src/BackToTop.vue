@@ -35,6 +35,15 @@ export default {
     let catchScroll = () => {
       this.visible = (window.pageYOffset > parseInt(this.visibleOffset))
     }
+
+    window.smoothscroll = () => {
+      let currentScroll = document.documentElement.scrollTop || document.body.scrollTop
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(window.smoothscroll)
+        window.scrollTo(0, currentScroll - (currentScroll / 5))
+      }
+    }
+
     window.onscroll = catchScroll
   },
   methods: {
@@ -43,12 +52,9 @@ export default {
      * @return {void}
      */
     backToTop () {
-      let currentScroll = document.documentElement.scrollTop || document.body.scrollTop
-      if (currentScroll > 0) {
-        window.requestAnimationFrame(window.smoothscroll)
-        window.scrollTo(0, currentScroll - (currentScroll / 5))
-      }
+      window.smoothscroll()
     }
   }
 }
 </script>
+<style src="./styles.css"></style>
