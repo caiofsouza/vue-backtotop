@@ -1,7 +1,7 @@
 {
   "name": "vue-backtotop",
   "description": "A Back-to-top component for Vue.js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Caio Fernandes <caio_fsouza@hotmail.com>",
   "main": "src/index.js",
   "scripts": {
@@ -24,5 +24,9 @@
     "vue-template-compiler": "^2.3.3",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/caiofsouza/vue-backtotop"
   }
 }
