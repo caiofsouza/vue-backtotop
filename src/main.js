@@ -1,7 +1,10 @@
-const BackToTop = require('./BackToTop.vue') 
+import BackToTop from './BackToTop.vue' 
 
-BackToTop.install = (Vue, options = {}) => {
+/**
+ * Check why can't use () => {}
+ */
+BackToTop.install = function (Vue, options) {
   Vue.component(BackToTop.name, BackToTop)
 }
 
-module.exports = BackToTop
+export default BackToTop
