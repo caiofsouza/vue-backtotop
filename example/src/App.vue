@@ -15,6 +15,11 @@
       </label><br>
       <input type="text" v-model="text">
     </div>
+    <div class="fork-me">
+      <a href="https://github.com/caiofsouza/vue-backtotop" target="_blank">
+        <img src="./assets/github.png" width="30" alt="Fork me on Github" title="Fork me on Github">
+      </a>
+    </div>
     <back-to-top :visibleOffset="visibleOffset" :text="text"></back-to-top>
   </div>
 </template>
