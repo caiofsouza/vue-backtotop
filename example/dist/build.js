@@ -239,7 +239,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(16)
+var listToStyles = __webpack_require__(17)
 
 /*
 type StyleObject = {
@@ -445,13 +445,13 @@ function applyToTag (styleElement, obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 function injectStyle (ssrContext) {
-  __webpack_require__(14)
+  __webpack_require__(15)
 }
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(6),
   /* template */
-  __webpack_require__(12),
+  __webpack_require__(13),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -10143,7 +10143,7 @@ Vue$3.compile = compileToFunctions;
 
 /* harmony default export */ __webpack_exports__["a"] = (Vue$3);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(17)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(18)))
 
 /***/ }),
 /* 5 */
@@ -10220,8 +10220,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_backtotop__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_backtotop__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_backtotop___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_backtotop__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -10314,7 +10319,13 @@ exports.push([module.i, ".back-to-top-fade-enter-active,.back-to-top-fade-leave-
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const BackToTop = __webpack_require__(11) 
+module.exports = __webpack_require__.p + "github.png?7518dd27e68f39023502e0788061fd17";
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const BackToTop = __webpack_require__(12) 
 
 BackToTop.install = (Vue, options = {}) => {
   Vue.component(BackToTop.name, BackToTop)
@@ -10324,17 +10335,17 @@ module.exports = BackToTop
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 function injectStyle (ssrContext) {
-  __webpack_require__(15)
+  __webpack_require__(16)
 }
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(5),
   /* template */
-  __webpack_require__(13),
+  __webpack_require__(14),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -10347,8 +10358,8 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 12 */
-/***/ (function(module, exports) {
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -10398,7 +10409,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.text = $event.target.value
       }
     }
-  })]), _vm._v(" "), _c('back-to-top', {
+  })]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('back-to-top', {
     attrs: {
       "visibleOffset": _vm.visibleOffset,
       "text": _vm.text
@@ -10416,10 +10427,26 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "for": ""
     }
   }, [_c('strong', [_vm._v("Button text")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "fork-me"
+  }, [_c('a', {
+    attrs: {
+      "href": "https://github.com/caiofsouza/vue-backtotop",
+      "target": "_blank"
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": __webpack_require__(10),
+      "width": "30",
+      "alt": "Fork me on Github",
+      "title": "Fork me on Github"
+    }
+  })])])
 }]}
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -10442,7 +10469,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -10455,7 +10482,7 @@ if(content.locals) module.exports = content.locals;
 var update = __webpack_require__(2)("6fe2ac92", content, true);
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -10468,7 +10495,7 @@ if(content.locals) module.exports = content.locals;
 var update = __webpack_require__(2)("514701a5", content, true);
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 /**
@@ -10501,7 +10528,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 var g;
