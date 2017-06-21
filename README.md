@@ -1,6 +1,10 @@
-# Vue-backtotop Component
+# Vue-BackToTop Component
 
 A Back-to-top component for Vue.js, which scroll page to the top when clicked
+
+## Demo
+
+See [demo](http://caiofsouza.github.io/vue-backtotop/example).
 
 ## Install via npm
 
@@ -10,11 +14,21 @@ npm install vue-backtotop --save
 
 ## Import and use
 
+Import for global usage
 ```javascript
 import Vue from 'vue'
 import BackToTop from 'vue-backtotop'
 
 Vue.use(BackToTop);
+...
+```
+
+Or on a single component
+```javascript
+import BackToTop from 'vue-backtotop'
+...
+},
+components: { BackToTop }
 ...
 ```
 
@@ -27,7 +41,7 @@ Vue.use(BackToTop);
 <back-to-top text="Back to top"></back-to-top>
 ```
 
-* The button to back to top become visible at window scroll at 800 > px. If you want to change this value, pass a property named "visibleOffset" with a number value. 
+* The button to back to top become visible at window scroll at 600 > px. If you want to change this value, pass a property named "visibleOffset" with a number value. 
 
 ```html
 <back-to-top text="Back to top" visibleOffset="500"></back-to-top>

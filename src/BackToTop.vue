@@ -1,9 +1,9 @@
 <template>
   <transition name="back-to-top-fade">
-    <div class="vue-back-to-top" v-show="visible">
-      <a @click="backToTop">
+    <div class="vue-back-to-top" v-show="visible" @click="backToTop">
+      <span>
         {{ text }}
-      </a>
+      </span>
     </div>
   </transition>
 </template>
@@ -19,7 +19,7 @@ export default {
     },
     visibleOffset: {
       type: [String, Number],
-      default: 800
+      default: 600
     }
   },
   data () {
