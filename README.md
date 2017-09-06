@@ -1,4 +1,6 @@
-# Vue-BackToTop Component
+# Vue Backtotop Component
+
+[![npm](https://img.shields.io/npm/v/vue-backtotop.svg)](https://www.npmjs.com/package/vue-backtotop)
 
 A Back-to-top component for Vue.js, which scroll page to the top when clicked
 
