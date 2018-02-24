@@ -33,10 +33,6 @@ export default {
       type: Number,
       default: 40,
     },
-    right: {
-      type: Number,
-      default: 30,
-    },
   },
   data () {
     return {
