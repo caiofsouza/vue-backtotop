@@ -1,9 +1,13 @@
 <template>
   <transition name="back-to-top-fade">
-    <div class="vue-back-to-top" v-show="visible" @click="backToTop">
-      <span>
-        {{ text }}
-      </span>
+    <div class="vue-back-to-top" :style="`bottom:${this.bottom}px;right:${this.right}px;`" v-show="visible" @click="backToTop">
+      <slot>
+        <div class="default">
+          <span>
+            {{ text }}
+          </span>
+        </div>
+      </slot>
     </div>
   </transition>
 </template>
@@ -20,7 +24,19 @@ export default {
     visibleOffset: {
       type: [String, Number],
       default: 600
-    }
+    },
+    right: {
+      type: Number,
+      default: 30,
+    },
+    bottom: {
+      type: Number,
+      default: 40,
+    },
+    right: {
+      type: Number,
+      default: 30,
+    },
   },
   data () {
     return {

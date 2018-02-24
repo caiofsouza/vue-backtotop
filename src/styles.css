@@ -7,18 +7,19 @@
 
 .vue-back-to-top{
   position: fixed;
-  bottom: 40px;
-  right: 30px;
+  z-index: 1000;
+  cursor:pointer;
+}
+
+.vue-back-to-top .default {
   width: 160px;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
   background-color: #f5c85c;
   border-radius: 3px;
-  z-index: 1000;
-  cursor:pointer;
 }
 
-.vue-back-to-top span{
+.vue-back-to-top .default span{
   color:#ffffff;
 }
