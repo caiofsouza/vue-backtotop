@@ -34,6 +34,16 @@ components: { BackToTop }
 ...
 ```
 
+## Props
+
+| Name          | Type             | Default         | Description                                                              |
+|---------------|------------------|-----------------|--------------------------------------------------------------------------|
+| text          | String           | 'Voltar ao topo | Text of back to top button                                               |
+| visibleOffset | String or Number | 600             | where the component should visible when user scroll reach certain offset |
+| bottom        | Number           | 40              | bottom position of the component                                         |
+| right         | Number           | 30              | right position of the component                                          |
+
+
 ## How to use
 
 
@@ -49,5 +59,23 @@ components: { BackToTop }
 <back-to-top text="Back to top" visibleOffset="500"></back-to-top>
 ```
 
+* Now it's possible to use your own html/vue component inside vue-backtotop component
+```css
+/* in your css */
+.btn-to-top {
+  width: 60px;
+  height: 60px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 22px;
+}
+```
+```html
+<!-- in your template -->
+<back-to-top :bottom="50" :right="50">
+  <button type="button" class="btn btn-info btn-to-top"><i class="fa fa-chevron-up"></i></button>
+</back-to-top>
+```
 
 
