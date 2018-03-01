@@ -20,7 +20,9 @@
         <img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" width="30" alt="Fork me on Github" title="Fork me on Github">
       </a>
     </div>
-    <back-to-top :visibleOffset="visibleOffset" :text="text"></back-to-top>
+    <back-to-top :visibleOffset="visibleOffset" :text="text" :bottom="50" :right="50">
+    
+    </back-to-top>
   </div>
 </template>
 
