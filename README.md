@@ -40,8 +40,8 @@ components: { BackToTop }
 |---------------|------------------|-----------------|--------------------------------------------------------------------------|
 | text          | String           | 'Voltar ao topo | Text of back to top button                                               |
 | visibleOffset | String or Number | 600             | where the component should visible when user scroll reach certain offset |
-| bottom        | Number           | 40              | bottom position of the component                                         |
-| right         | Number           | 30              | right position of the component                                          |
+| bottom        | String           | 40px            | bottom position of the component                                         |
+| right         | String           | 30px            | right position of the component                                          |
 
 
 ## How to use
@@ -73,7 +73,7 @@ components: { BackToTop }
 ```
 ```html
 <!-- in your template -->
-<back-to-top :bottom="50" :right="50">
+<back-to-top bottom="50px" right="50px">
   <button type="button" class="btn btn-info btn-to-top"><i class="fa fa-chevron-up"></i></button>
 </back-to-top>
 ```

@@ -1,6 +1,6 @@
 <template>
   <transition name="back-to-top-fade">
-    <div class="vue-back-to-top" :style="`bottom:${this.bottom}px;right:${this.right}px;`" v-show="visible" @click="backToTop">
+    <div class="vue-back-to-top" :style="`bottom:${this.bottom};right:${this.right};`" v-show="visible" @click="backToTop">
       <slot>
         <div class="default">
           <span>
@@ -26,12 +26,12 @@ export default {
       default: 600
     },
     right: {
-      type: Number,
-      default: 30,
+      type: String,
+      default: '30px',
     },
     bottom: {
-      type: Number,
-      default: 40,
+      type: String,
+      default: '40px',
     },
   },
   data () {
