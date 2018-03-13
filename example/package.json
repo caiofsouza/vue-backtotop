@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^2.3.3",
-    "vue-backtotop": "^1.2.3"
+    "vue-backtotop": "^1.3.9"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

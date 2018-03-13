@@ -20,9 +20,7 @@
         <img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" width="30" alt="Fork me on Github" title="Fork me on Github">
       </a>
     </div>
-    <back-to-top :visibleOffset="visibleOffset" :text="text" :bottom="50" :right="50">
-    
-    </back-to-top>
+    <back-to-top :visibleOffset="visibleOffset" :text="text" :bottom="'40px'" :right="'40px'" />
   </div>
 </template>
 
@@ -38,8 +36,8 @@ export default {
     }
   },
   watch: {
-    visibleOffset (newVal) {
-      document.body.style.height = newVal + 600
+    visibleOffset (newVal, oldVal) {
+      document.body.style.height = (parseInt(newVal) + 2000) + 'px'
     }
   },
   components: { BackToTop }
