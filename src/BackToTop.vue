@@ -39,15 +39,7 @@ export default {
       visible: false
     }
   },
-  /**
-   * Catch window scroll event 
-   * @return {void}
-   */
-  created () {
-    let catchScroll = () => {
-      this.visible = (window.pageYOffset > parseInt(this.visibleoffset))
-    }
-
+  mounted () {
     window.smoothscroll = () => {
       let currentScroll = document.documentElement.scrollTop || document.body.scrollTop
       if (currentScroll > 0) {
@@ -55,10 +47,19 @@ export default {
         window.scrollTo(0, Math.floor(currentScroll - (currentScroll / 5)))
       }
     }
-
-    window.onscroll = catchScroll
+    window.addEventListener('scroll', this.catchScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.catchScroll)
   },
   methods: {
+    /**
+     * Catch window scroll event 
+     * @return {void}
+     */
+    catchScroll () {
+      this.visible = (window.pageYOffset > parseInt(this.visibleoffset))
+    },
     /**
      * The function who make the magics
      * @return {void}
