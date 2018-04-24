@@ -21,7 +21,7 @@ export default {
       type: String,
       default: 'Voltar ao topo'
     },
-    visibleOffset: {
+    visibleoffset: {
       type: [String, Number],
       default: 600
     },
@@ -45,7 +45,7 @@ export default {
    */
   created () {
     let catchScroll = () => {
-      this.visible = (window.pageYOffset > parseInt(this.visibleOffset))
+      this.visible = (window.pageYOffset > parseInt(this.visibleoffset))
     }
 
     window.smoothscroll = () => {

@@ -39,7 +39,7 @@ components: { BackToTop }
 | Name          | Type             | Default         | Description                                                              |
 |---------------|------------------|-----------------|--------------------------------------------------------------------------|
 | text          | String           | 'Voltar ao topo | Text of back to top button                                               |
-| visibleOffset | String or Number | 600             | where the component should visible when user scroll reach certain offset |
+| visibleoffset | String or Number | 600             | where the component should visible when user scroll reach certain offset |
 | bottom        | String           | 40px            | bottom position of the component                                         |
 | right         | String           | 30px            | right position of the component                                          |
 
@@ -56,7 +56,7 @@ components: { BackToTop }
 * The button to back to top become visible at window scroll at 600 > px. If you want to change this value, pass a property named "visibleOffset" with a number value. 
 
 ```html
-<back-to-top text="Back to top" visibleOffset="500"></back-to-top>
+<back-to-top text="Back to top" visibleoffset="500"></back-to-top>
 ```
 
 * Now it's possible to use your own html/vue component inside vue-backtotop component

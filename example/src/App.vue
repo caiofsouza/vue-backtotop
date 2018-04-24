@@ -7,7 +7,7 @@
       <label for="">
         <strong>Visible on scroll, in px</strong>
       </label><br>
-      <input type="text" v-model="visibleOffset" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+      <input type="text" v-model="visibleoffset" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
     </div>
     <div class="form-control">
       <label for="">
@@ -15,12 +15,24 @@
       </label><br>
       <input type="text" v-model="text">
     </div>
+    <div class="form-control">
+      <label for="">
+        <strong>Bottom</strong>
+      </label><br>
+      <input type="text" v-model="bottom">
+    </div>
+    <div class="form-control">
+      <label for="">
+        <strong>Right</strong>
+      </label><br>
+      <input type="text" v-model="right">
+    </div>
     <div class="fork-me">
       <a href="https://github.com/caiofsouza/vue-backtotop" target="_blank">
         <img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" width="30" alt="Fork me on Github" title="Fork me on Github">
       </a>
     </div>
-    <back-to-top :visibleOffset="visibleOffset" :text="text" :bottom="'40px'" :right="'40px'" />
+    <back-to-top :visibleoffset="visibleoffset" :text="text" :bottom="bottom" :right="right" />
   </div>
 </template>
 
@@ -31,12 +43,14 @@ export default {
   name: 'app',
   data () {
     return {
-      visibleOffset: 600,
-      text: 'Back to top'
+      visibleoffset: 600,
+      text: 'Back to top',
+      bottom: '40px',
+      right: '40px'
     }
   },
   watch: {
-    visibleOffset (newVal, oldVal) {
+    visibleoffset (newVal, oldVal) {
       document.body.style.height = (parseInt(newVal) + 2000) + 'px'
     }
   },
