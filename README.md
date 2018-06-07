@@ -21,7 +21,7 @@ Import for global usage
 import Vue from 'vue'
 import BackToTop from 'vue-backtotop'
 
-Vue.use(BackToTop);
+Vue.use(BackToTop)
 ...
 ```
 
@@ -39,27 +39,33 @@ components: { BackToTop }
 | Name          | Type             | Default         | Description                                                              |
 |---------------|------------------|-----------------|--------------------------------------------------------------------------|
 | text          | String           | 'Voltar ao topo | Text of back to top button                                               |
-| visibleoffset | String or Number | 600             | where the component should visible when user scroll reach certain offset |
-| bottom        | String           | 40px            | bottom position of the component                                         |
-| right         | String           | 30px            | right position of the component                                          |
+| visibleoffset | String or Number | 600             | Where the component should visible when user scroll reach certain offset |
+| bottom        | String           | 40px            | Bottom position of the component                                         |
+| right         | String           | 30px            | Right position of the component                                          |
 
 
 ## How to use
 
 
-* Currently, the vue-backtotop has a property named "text", that is the text which will be visible on button. The default value is "Voltar ao topo".
+Currently, the vue-backtotop has a property named "text", that is the text which will be visible on button. The default value is "Voltar ao topo".
 
 ```html
 <back-to-top text="Back to top"></back-to-top>
 ```
 
-* The button to back to top become visible at window scroll at 600 > px. If you want to change this value, pass a property named "visibleOffset" with a number value. 
+The button to back to top become visible at window scroll at 600 > px. If you want to change this value, pass a property named "visibleOffset" with a number value. 
 
 ```html
 <back-to-top text="Back to top" visibleoffset="500"></back-to-top>
 ```
 
-* Now it's possible to use your own html/vue component inside vue-backtotop component
+Now, it's possible to use your own html/vue component inside vue-backtotop component
+```html
+<!-- in your template -->
+<back-to-top bottom="50px" right="50px">
+  <button type="button" class="btn btn-info btn-to-top"><i class="fa fa-chevron-up"></i></button>
+</back-to-top>
+```
 ```css
 /* in your css */
 .btn-to-top {
@@ -70,12 +76,6 @@ components: { BackToTop }
   font-size: 22px;
   line-height: 22px;
 }
-```
-```html
-<!-- in your template -->
-<back-to-top bottom="50px" right="50px">
-  <button type="button" class="btn btn-info btn-to-top"><i class="fa fa-chevron-up"></i></button>
-</back-to-top>
 ```
 
 
