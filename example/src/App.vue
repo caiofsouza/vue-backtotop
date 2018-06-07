@@ -38,6 +38,7 @@
 
 <script>
 import BackToTop from 'vue-backtotop'
+// import BackToTop from '../../src/BackToTop.vue'
 
 export default {
   name: 'app',
