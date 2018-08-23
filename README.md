@@ -43,6 +43,11 @@ components: { BackToTop }
 | bottom        | String           | 40px            | bottom position of the component                                         |
 | right         | String           | 30px            | right position of the component                                          |
 
+## Events
+
+| Name                   | Description                                                              |
+|------------------------|--------------------------------------------------------------------------|
+| triggered              | Fired when back to top element is clicked                                |
 
 ## How to use
 
