@@ -47,7 +47,7 @@ components: { BackToTop }
 
 | Name                   | Description                                                              |
 |------------------------|--------------------------------------------------------------------------|
-| triggered              | Fired when back to top element is clicked                                |
+| scrolled               | Fired when page's scroll ends                                            |
 
 ## How to use
 
