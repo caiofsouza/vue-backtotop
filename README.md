@@ -64,13 +64,21 @@ The button to back to top become visible at window scroll at 600 > px. If you wa
 <back-to-top text="Back to top" visibleoffset="500"></back-to-top>
 ```
 
+You can also know when scroll ends
+
+```html
+<back-to-top text="Back to top" @scrolled="myFunction"></back-to-top>
+```
+
 Now, it's possible to use your own html/vue component inside vue-backtotop component
+
 ```html
 <!-- in your template -->
 <back-to-top bottom="50px" right="50px">
   <button type="button" class="btn btn-info btn-to-top"><i class="fa fa-chevron-up"></i></button>
 </back-to-top>
 ```
+
 ```css
 /* in your css */
 .btn-to-top {

@@ -32,7 +32,12 @@
         <img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" width="30" alt="Fork me on Github" title="Fork me on Github">
       </a>
     </div>
-    <back-to-top :visibleoffset="visibleoffset" :text="text" :bottom="bottom" :right="right" />
+    <back-to-top 
+      :visibleoffset="visibleoffset" 
+      :text="text" 
+      :bottom="bottom" 
+      :right="right"
+      @scrolled="scrolled" />
   </div>
 </template>
 
@@ -52,6 +57,11 @@ export default {
   watch: {
     visibleoffset (newVal, oldVal) {
       document.body.style.height = (parseInt(newVal) + 2000) + 'px'
+    }
+  },
+  methods: {
+    scrolled () {
+      console.log('Scrolled !')
     }
   },
   components: { BackToTop }
