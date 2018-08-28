@@ -66,6 +66,7 @@ export default {
      */
     backToTop () {
       window.smoothscroll()
+      this.$emit('scrolled');
     }
   }
 }

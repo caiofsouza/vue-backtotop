@@ -43,6 +43,11 @@ components: { BackToTop }
 | bottom        | String           | 40px            | Bottom position of the component                                         |
 | right         | String           | 30px            | Right position of the component                                          |
 
+## Events
+
+| Name                   | Description                                                              |
+|------------------------|--------------------------------------------------------------------------|
+| scrolled               | Fired when page's scroll ends                                            |
 
 ## How to use
 
