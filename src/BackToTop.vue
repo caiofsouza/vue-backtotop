@@ -13,62 +13,71 @@
 </template>
 
 <script>
-
 export default {
-  name: 'BackToTop',
+  name: "BackToTop",
   props: {
     text: {
       type: String,
-      default: 'Voltar ao topo'
+      default: "Voltar ao topo"
     },
     visibleoffset: {
       type: [String, Number],
       default: 600
     },
+    visibleoffsetbottom: {
+      type: [String, Number],
+      default: 0
+    },
     right: {
       type: String,
-      default: '30px',
+      default: "30px"
     },
     bottom: {
       type: String,
-      default: '40px',
-    },
+      default: "40px"
+    }
   },
-  data () {
+  data() {
     return {
       visible: false
-    }
+    };
   },
-  mounted () {
+  mounted() {
     window.smoothscroll = () => {
-      let currentScroll = document.documentElement.scrollTop || document.body.scrollTop
+      let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
       if (currentScroll > 0) {
-        window.requestAnimationFrame(window.smoothscroll)
-        window.scrollTo(0, Math.floor(currentScroll - (currentScroll / 5)))
+        window.requestAnimationFrame(window.smoothscroll);
+        window.scrollTo(0, Math.floor(currentScroll - currentScroll / 5));
       }
-    }
-    window.addEventListener('scroll', this.catchScroll)
+    };
+    window.addEventListener("scroll", this.catchScroll);
   },
-  destroyed () {
-    window.removeEventListener('scroll', this.catchScroll)
+  destroyed() {
+    window.removeEventListener("scroll", this.catchScroll);
   },
   methods: {
     /**
-     * Catch window scroll event 
+     * Catch window scroll event
      * @return {void}
      */
-    catchScroll () {
-      this.visible = (window.pageYOffset > parseInt(this.visibleoffset))
+    catchScroll() {
+      let pastTopOffset = window.pageYOffset > parseInt(this.visibleoffset);
+      let pastBottomOffset = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - parseInt(this.visibleoffsetbottom);
+      if (parseInt(this.visibleoffsetbottom) > 0) {
+        this.visible = pastTopOffset && !pastBottomOffset;
+      } else {
+        this.visible = pastTopOffset;
+      }
     },
     /**
      * The function who make the magics
      * @return {void}
      */
-    backToTop () {
-      window.smoothscroll()
-      this.$emit('scrolled');
+    backToTop() {
+      window.smoothscroll();
+      this.$emit("scrolled");
     }
   }
-}
+};
 </script>
 <style src="./styles.css"></style>
