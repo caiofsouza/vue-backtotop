@@ -25,6 +25,10 @@ export default {
       type: [String, Number],
       default: 600
     },
+    visibleoffsetbottom: {
+      type: [String, Number],
+      default: 0
+    },
     right: {
       type: String,
       default: '30px',
@@ -58,7 +62,9 @@ export default {
      * @return {void}
      */
     catchScroll () {
-      this.visible = (window.pageYOffset > parseInt(this.visibleoffset))
+      const pastTopOffset = window.pageYOffset > parseInt(this.visibleoffset);
+      const pastBottomOffset = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - parseInt(this.visibleoffsetbottom);
+      this.visible = parseInt(this.visibleoffsetbottom) > 0 ? pastTopOffset && !pastBottomOffset : pastTopOffset;
     },
     /**
      * The function who make the magics
