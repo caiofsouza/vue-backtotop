@@ -13,6 +13,7 @@
 
 .vue-back-to-top .default {
   width: 160px;
+  height: 30px;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
@@ -22,4 +23,10 @@
 
 .vue-back-to-top .default span{
   color:#ffffff;
+}
+
+.vue-back-to-top--is-footer {
+    position: absolute;
+    bottom: 50% !important;
+    transform: translateY(50%);
 }
