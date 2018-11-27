@@ -70,9 +70,10 @@ export default {
      * @return {void}
      */
     catchScroll () {
-      const pastTopOffset = window.pageYOffset > parseInt(this.visibleoffset);
-      const pastBottomOffset = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - parseInt(this.visibleoffsetbottom);
-      this.visible = parseInt(this.visibleoffsetbottom) > 0 ? pastTopOffset && !pastBottomOffset : pastTopOffset;
+      const pastTopOffset = window.pageYOffset > parseInt(this.visibleoffset)
+      const pastBottomOffset = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - parseInt(this.visibleoffsetbottom)
+      this.visible = parseInt(this.visibleoffsetbottom) > 0 ? pastTopOffset && !pastBottomOffset : pastTopOffset
+      this.scrollFn(this)
     },
     /**
      * The function who make the magics
@@ -80,7 +81,7 @@ export default {
      */
     backToTop () {
       window.smoothscroll()
-      this.$emit('scrolled');
+      this.$emit('scrolled')
     }
   },
 }

@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import BackToTop from 'vue-backtotop'
+import BackToTop from '../../src/BackToTop.vue'
 
 export default {
   name: 'app',
@@ -62,16 +62,16 @@ export default {
   },
   created () {
     // private
-    this.scrollIndentBackTop = 0;
-    this.scrollHeight = 0;
+    this.scrollIndentBackTop = 0
+    this.scrollHeight = 0
   },
   mounted () {
       this.scrollHeight = Math.max(
           document.body.scrollHeight, document.documentElement.scrollHeight,
           document.body.offsetHeight, document.documentElement.offsetHeight,
           document.body.clientHeight, document.documentElement.clientHeight
-      ) - window.innerHeight;
-      this.scrollIndentBackTop = document.getElementsByClassName('footer')[0].clientHeight / 2;
+      ) - window.innerHeight
+      this.scrollIndentBackTop = document.getElementsByClassName('footer')[0].clientHeight / 2
   },
   watch: {
     visibleoffset (newVal, oldVal) {
@@ -83,9 +83,8 @@ export default {
       console.log('Scrolled !')
     },
     scrollFn: function (eventObject) {
-      let diff = this.scrollHeight - window.pageYOffset;
-      this.isBackTopFooter = diff < (this.scrollIndentBackTop - 40 - 15);
-      console.log(this.isBackTopFooter);
+      let diff = this.scrollHeight - window.pageYOffset
+      this.isBackTopFooter = diff < (this.scrollIndentBackTop - 40 - 15)
     }
   },
   components: { BackToTop }
