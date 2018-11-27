@@ -40,7 +40,7 @@
         :bottom="bottom" 
         :right="right"
         :scrollFn="scrollFn"
-        v-bind:class="{ 'vue-back-to-top--is-footer': isBackTopFooter }"
+        :class="{ 'vue-back-to-top--is-footer': isBackTopFooter }"
         @scrolled="scrolled" />
     </footer>
   </div>

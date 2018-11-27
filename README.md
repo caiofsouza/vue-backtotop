@@ -40,6 +40,7 @@ components: { BackToTop }
 |-------------------------|------------------|-----------------|--------------------------------------------------------------------------|
 | text                    | String           | 'Voltar ao topo | Text of back to top button                                               |
 | visibleoffset           | String or Number | 600             | Where the component should visible when user scroll reach certain offset |
+| visibleoffsetbottom           | String or Number | 0             | Where the component should visible when user scroll reach certain bottom offset |
 | bottom                  | String           | 40px            | Bottom position of the component                                         |
 | right                   | String           | 30px            | Right position of the component                                          |
 | scrollFn (eventObject)  | Function         | 30px            | Function defining custom actions when scrolling                          |

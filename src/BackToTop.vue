@@ -1,6 +1,10 @@
 <template>
   <transition name="back-to-top-fade">
-    <div class="vue-back-to-top" :style="`bottom:${this.bottom};right:${this.right};`" v-show="visible" @click="backToTop">
+    <div 
+      class="vue-back-to-top" 
+      :style="`bottom:${this.bottom};right:${this.right};`" 
+      v-show="visible" 
+      @click="backToTop">
       <slot>
         <div class="default">
           <span>
@@ -19,15 +23,15 @@ export default {
   props: {
     text: {
       type: String,
-      default: 'Voltar ao topo'
+      default: 'Voltar ao topo',
     },
     visibleoffset: {
       type: [String, Number],
-      default: 600
+      default: 600,
     },
     visibleoffsetbottom: {
       type: [String, Number],
-      default: 0
+      default: 0,
     },
     right: {
       type: String,
@@ -39,7 +43,7 @@ export default {
     },
     scrollFn: {
       type: Function,
-      default: function (eventObject) {}
+      default: function (eventObject) {},
     }
   },
   data () {
@@ -78,7 +82,7 @@ export default {
       window.smoothscroll()
       this.$emit('scrolled');
     }
-  }
+  },
 }
 </script>
 <style src="./styles.css"></style>
