@@ -33,6 +33,10 @@ export default {
       type: String,
       default: '40px',
     },
+    scrollFn: {
+      type: Function,
+      default: function (eventObject) {}
+    }
   },
   data () {
     return {
@@ -59,6 +63,7 @@ export default {
      */
     catchScroll () {
       this.visible = (window.pageYOffset > parseInt(this.visibleoffset))
+      this.scrollFn(this)
     },
     /**
      * The function who make the magics

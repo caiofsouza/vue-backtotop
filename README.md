@@ -36,12 +36,13 @@ components: { BackToTop }
 
 ## Props
 
-| Name          | Type             | Default         | Description                                                              |
-|---------------|------------------|-----------------|--------------------------------------------------------------------------|
-| text          | String           | 'Voltar ao topo | Text of back to top button                                               |
-| visibleoffset | String or Number | 600             | Where the component should visible when user scroll reach certain offset |
-| bottom        | String           | 40px            | Bottom position of the component                                         |
-| right         | String           | 30px            | Right position of the component                                          |
+| Name                    | Type             | Default         | Description                                                              |
+|-------------------------|------------------|-----------------|--------------------------------------------------------------------------|
+| text                    | String           | 'Voltar ao topo | Text of back to top button                                               |
+| visibleoffset           | String or Number | 600             | Where the component should visible when user scroll reach certain offset |
+| bottom                  | String           | 40px            | Bottom position of the component                                         |
+| right                   | String           | 30px            | Right position of the component                                          |
+| scrollFn (eventObject)  | Function         | 30px            | Function defining custom actions when scrolling                          |
 
 ## Events
 
