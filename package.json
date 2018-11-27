@@ -1,7 +1,7 @@
 {
   "name": "vue-backtotop",
   "description": "A Back-to-top component for Vue.js",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "author": "Caio Fernandes <caio_fsouza@hotmail.com>",
   "main": "src/main.js",
   "scripts": {
