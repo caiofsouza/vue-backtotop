@@ -37,6 +37,10 @@ export default {
       type: String,
       default: '40px',
     },
+    scrollFn: {
+      type: Function,
+      default: function (eventObject) {}
+    }
   },
   data () {
     return {
