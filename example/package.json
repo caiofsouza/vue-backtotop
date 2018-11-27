@@ -10,19 +10,19 @@
   },
   "dependencies": {
     "vue": "~2.3.3",
-    "vue-backtotop": "~1.6.0"
+    "vue-backtotop": "1.6.0"
   },
   "devDependencies": {
-    "babel-core": "~6.0.0",
-    "babel-loader": "~6.0.0",
-    "babel-preset-env": "~1.5.1",
-    "cross-env": "~3.0.0",
-    "css-loader": "~0.25.0",
-    "file-loader": "~0.9.0",
-    "vue-awesome": "~2.3.1",
-    "vue-loader": "~12.1.0",
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-preset-env": "^1.5.1",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "vue-awesome": "^2.3.1",
+    "vue-loader": "^12.1.0",
     "vue-template-compiler": "~2.3.3",
-    "webpack": "~2.6.1",
-    "webpack-dev-server": "~2.4.5"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }
