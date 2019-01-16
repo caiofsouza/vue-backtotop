@@ -1,7 +1,10 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const webpack = require('webpack');
+const devMode = process.env.NODE_ENV !== 'production';
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -15,24 +18,12 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: {
-          loaders: {
-            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-            // the "scss" and "sass" values for the lang attribute to the right configs here.
-            // other preprocessors should work out of the box, no loader config like this necessary.
-            'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-          }
-          // other vue-loader options go here
-        }
       },
       {
         test: /\.css$/,
         use: [
-          'vue-style-loader',
-          {
-            loader: 'css-loader',
-          }
+          devMode ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader'
         ]
       },
       {
@@ -55,21 +46,27 @@ module.exports = {
     }
   },
   optimization: {
+    minimize: !devMode,
     minimizer: [
-      new UglifyJsPlugin({
-        sourceMap: true,
-        parallel: 4,
-        uglifyOptions: {
-          warnings: false,
-          compress: {
-            warnings: false
-          },
-        },
-      })
+      new TerserPlugin({
+        terserOptions: {
+          ecma: 6,
+          compress: true,
+          output: {
+            comments: false,
+            beautify: false
+          }
+        }
+      }),
+      new OptimizeCSSAssetsPlugin({})
     ]
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'vue-backtotop.css',
+      disable: devMode
+    }),
   ],
   devServer: {
     historyApiFallback: true,
@@ -79,10 +76,10 @@ module.exports = {
     hints: false
   },
   devtool: '#eval-source-map'
-}
+};
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
+  module.exports.devtool = '#source-map';
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
@@ -93,5 +90,5 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
-  ])
+  ]);
 }

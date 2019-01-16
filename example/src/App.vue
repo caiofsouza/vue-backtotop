@@ -34,10 +34,10 @@
     </div>
     <footer class="footer">
       <h2>Footer</h2>
-      <back-to-top 
-        :visibleoffset="visibleoffset" 
-        :text="text" 
-        :bottom="bottom" 
+      <back-to-top
+        :visibleoffset="visibleoffset"
+        :text="text"
+        :bottom="bottom"
         :right="right"
         :scrollFn="scrollFn"
         :class="{ 'vue-back-to-top--is-footer': isBackTopFooter }"
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import BackToTop from 'vue-backtotop'
+import BackToTop from '../../src/BackToTop.vue'
 
 export default {
   name: 'app',
@@ -115,7 +115,7 @@ body{
 h1{
   margin-top:100px;
   font-weight: 600;
-  font-size: 40px; 
+  font-size: 40px;
   padding-bottom:20px;
   border-bottom: 1px solid #2c3e50;
 }

@@ -1,9 +1,9 @@
 <template>
   <transition name="back-to-top-fade">
-    <div 
-      class="vue-back-to-top" 
-      :style="`bottom:${this.bottom};right:${this.right};`" 
-      v-show="visible" 
+    <div
+      class="vue-back-to-top"
+      :style="`bottom:${this.bottom};right:${this.right};`"
+      v-show="visible"
       @click="backToTop">
       <slot>
         <div class="default">
@@ -66,7 +66,7 @@ export default {
   },
   methods: {
     /**
-     * Catch window scroll event 
+     * Catch window scroll event
      * @return {void}
      */
     catchScroll () {

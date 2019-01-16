@@ -4,27 +4,32 @@
   "version": "1.6.1",
   "author": "Caio Fernandes <caio_fsouza@hotmail.com>",
   "main": "src/main.js",
+  "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --mode development --watch",
-    "build": "cross-env NODE_ENV=production webpack --mode production --progress --hide-modules"
+    "dev": "cd example && npm run dev",
+    "build:example": "cd example && npm run build",
+    "build:lib": "cross-env NODE_ENV=production webpack --mode production --progress --hide-modules",
+    "build": "npm run build:lib && npm run build:example"
   },
   "dependencies": {
-    "vue": "^2.5.21"
+    "vue": "^2.5.22"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
-    "babel-loader": "^8.0.4",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
     "cross-env": "^5.2.0",
-    "css-loader": "^2.0.1",
-    "file-loader": "^2.0.0",
-    "node-sass": "^4.5.0",
+    "css-loader": "^2.1.0",
+    "file-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
-    "uglifyjs-webpack-plugin": "^2.0.1",
-    "vue-loader": "^15.4.2",
-    "vue-template-compiler": "^2.5.21",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
+    "terser-webpack-plugin": "^1.2.1",
+    "vue-loader": "^15.5.1",
+    "vue-template-compiler": "^2.5.22",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
   },
   "repository": {
     "type": "git",
