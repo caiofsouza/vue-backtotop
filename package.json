@@ -3,10 +3,14 @@
   "description": "A Back-to-top component for Vue.js",
   "version": "1.6.1",
   "author": "Caio Fernandes <caio_fsouza@hotmail.com>",
-  "main": "src/main.js",
+  "main": "dist/vue-backtotop.cjs.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "npm run build:cjs & npm run build:es & npm run build:umd",
+    "prepublishOnly": "npm run build",
+    "build:cjs": "rollup --config rollup.config.js --format cjs --file dist/vue-backtotop.cjs.js",
+    "build:es": "rollup --config rollup.config.js --format es --file dist/vue-backtotop.esm.js",
+    "build:umd": "rollup --config rollup.config.js --format umd --file dist/vue-backtotop.umd.js"
   },
   "dependencies": {
     "vue": "2.3.3"
@@ -19,6 +23,11 @@
     "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",
     "node-sass": "^4.5.0",
+    "rollup": "^0.67.0",
+    "rollup-plugin-buble": "^0.19.4",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-vue": "^4.3.2",
     "sass-loader": "^5.0.1",
     "vue-loader": "^12.1.0",
     "vue-template-compiler": "2.3.3",

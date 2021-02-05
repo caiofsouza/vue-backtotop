@@ -4,3 +4,4 @@ npm-debug.log
 yarn-error.log
 !example/dist
 package-lock.json
+.idea/

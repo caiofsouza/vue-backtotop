@@ -20,6 +20,7 @@ Import for global usage
 ```javascript
 import Vue from 'vue'
 import BackToTop from 'vue-backtotop'
+import 'vue-backtotop/src/styles.css'
 
 Vue.use(BackToTop)
 ...
@@ -28,6 +29,7 @@ Vue.use(BackToTop)
 Or on a single component
 ```javascript
 import BackToTop from 'vue-backtotop'
+import 'vue-backtotop/src/styles.css'
 ...
 },
 components: { BackToTop }
