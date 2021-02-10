@@ -13,7 +13,7 @@ See [demo](http://caiofsouza.github.io/vue-backtotop/example).
 ## Install via npm
 
 ```bash
-npm install vue-backtotop --save
+npm install vue-backtotop-ssr --save
 ```
 
 ## Import and use
