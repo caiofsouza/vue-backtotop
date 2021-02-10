@@ -1,8 +1,8 @@
 {
-  "name": "vue-backtotop",
-  "description": "A Back-to-top component for Vue.js",
+  "name": "vue-backtotop-ssr",
+  "description": "A Back-to-top component for Vue.js, SSR support",
   "version": "1.6.2",
-  "author": "Caio Fernandes <caio_fsouza@hotmail.com>",
+  "author": "Sitronik <sitronik92@mail.ru>",
   "main": "dist/vue-backtotop.cjs.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
@@ -36,6 +36,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/caiofsouza/vue-backtotop"
+    "url": "https://github.com/Sitronik/vue-backtotop.git"
   }
 }

@@ -4,6 +4,8 @@
 
 A Back-to-top component for Vue.js, which scroll page to the top when clicked
 
+SSR support
+
 ## Demo
 
 See [demo](http://caiofsouza.github.io/vue-backtotop/example).
@@ -20,7 +22,7 @@ Import for global usage
 ```javascript
 import Vue from 'vue'
 import BackToTop from 'vue-backtotop'
-import 'vue-backtotop/src/styles.css'
+import 'vue-backtotop/src/styles.css' // if needed
 
 Vue.use(BackToTop)
 ...
@@ -29,7 +31,7 @@ Vue.use(BackToTop)
 Or on a single component
 ```javascript
 import BackToTop from 'vue-backtotop'
-import 'vue-backtotop/src/styles.css'
+import 'vue-backtotop/src/styles.css' // if needed
 ...
 },
 components: { BackToTop }
