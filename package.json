@@ -1,7 +1,7 @@
 {
   "name": "vue-backtotop",
   "description": "A Back-to-top component for Vue.js",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "author": "Caio Fernandes <caio_fsouza@hotmail.com>",
   "main": "src/main.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "vue": "2.3.3"
+    "vue": "^2.3.3"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
